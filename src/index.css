@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .basis-20 {
+    flex: 0 0 5rem;
+  }
+  .basis-60 {
+    flex: 0 0 60px;
+  }
+}
+
+/* Custom Fonts  */
+@font-face {
+  font-family: "Metropolis Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Metropolis Regular"),
+    url("./assets/fonts/Metropolis-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Metropolis Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Metropolis Medium"),
+    url("./assets/fonts/Metropolis-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Metropolis Semi Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Metropolis Semi Bold"),
+    url("./assets/fonts/Metropolis-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Metropolis Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Metropolis Bold"),
+    url("./assets/fonts/Metropolis-Bold.woff") format("woff");
+}
+
+body {
+  font-family: "Metropolis Regular";
+}
+
+.input-grid-1 {
+  display: grid;
+  grid-template-columns: 150px auto;
+  grid-gap: 20px;
+}
+.bg-wrapper-full {
+  background-color: #f5f5f5;
+}
+.input-grid-1.two {
+  grid-template-columns: 110px auto;
+}
+.tripple-grid {
+  display: grid;
+  grid-template-columns: 415px auto 415px;
+}
+
+@media screen and (max-width: 1530px) {
+  .tripple-grid {
+    grid-template-columns: 350px auto 350px;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .tripple-grid {
+    display: flex;
+  }
+}
+@media screen and (max-width: 767px) {
+  .input-grid-1,
+  .input-grid-1.two {
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+  }
+}
